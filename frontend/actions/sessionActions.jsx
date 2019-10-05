@@ -4,6 +4,7 @@ export const RECEIVE_USER = 'RECEIVE_USER';
 export const REMOVE_USER = 'REMOVE_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+export const CHECK_EMAIL = 'CHECK_EMAIL';
 
 const receiveUser = (user) => ({
     type: RECEIVE_USER,
@@ -12,7 +13,10 @@ const receiveUser = (user) => ({
 export const clearErrors = () => ({
     type: CLEAR_ERRORS
 });
-
+const checkUser = (email) => ({
+    type: CHECK_EMAIL,
+    email
+});
 
 
 const removeUser = () => ({
@@ -47,6 +51,13 @@ export const login = (user) => dispatch => (
 export const logout = () => dispatch => (
     APIUtil.logout().then(() => dispatch(removeUser())
     )
+);
+
+export const checkEmail = email => dispatch => (
+
+    APIUtil.checkEmail(email).then((email) => (dispatch(checkUser(email))),
+        (err) => (dispatch(receiveErrors(err.responseJSON))
+        ))
 );
 
 

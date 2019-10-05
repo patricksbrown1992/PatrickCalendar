@@ -3,12 +3,12 @@ import entitiesReducer from './entities/entitiesReducer';
 // import sessionReducer from './sessionReducer';
 import errorsReducer from './errors/sessionErrorsReducer';
 
-// import uiReducer from './uiReducer/uiReducer';
+import uiReducer from './uiReducer/uiReducer';
 
 const rootReducer = combineReducers({
     entities: entitiesReducer,
+    ui: uiReducer,
     // session: sessionReducer,
-    // ui: uiReducer,
     errors: errorsReducer
 });
 

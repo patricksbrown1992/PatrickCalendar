@@ -26,3 +26,14 @@ export const logout = () => (
         url: `api/session`
     })
 );
+
+export const checkEmail = (email) => {
+
+    return $.ajax({
+        method: 'GET',
+        url: 'api/users/verify',
+        data: {
+            email
+        }
+    });
+};

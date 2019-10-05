@@ -1,6 +1,7 @@
 import {
     RECEIVE_ERRORS,
     RECEIVE_USER,
+    CHECK_EMAIL,
     CLEAR_ERRORS
 
 } from '../../actions/sessionActions';
@@ -12,8 +13,8 @@ const SessionErrorsReducer = (state = [], action) => {
     switch (action.type) {
         case RECEIVE_ERRORS:
             return merge([], state, action.errors);
-
-
+        case CHECK_EMAIL:
+            return merge([], state, []);
 
         case RECEIVE_USER:
 
