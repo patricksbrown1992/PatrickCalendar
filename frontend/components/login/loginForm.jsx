@@ -47,7 +47,7 @@ class LogInForm extends React.Component {
                         <div className="log-in-top">
                             <h1 className='log-in-Poogle'>Poogle</h1>
                             <h3>Sign in</h3>
-                            <h3>to continue to Patrick Calendar</h3>
+                            <h4>to continue to Patrick Calendar</h4>
                         </div>
 
                         <div className="log-in-middle">
@@ -59,21 +59,23 @@ class LogInForm extends React.Component {
 
                             {errors}
                             <br />
-                            <div className='enter-username'>
-                                <Link to='/signup'>Create account</Link>
-                                <form onSubmit={this.handleSubmit}>
-                                    <button type='submit'>Next</button>
-                                </form>
-                            </div>
                         </div>
+                        <div className='login-button'>
+                            <Link to='/signup'>Create account</Link>
+                            <form onSubmit={this.handleSubmit}>
+                                <button type='submit'>Next</button>
+                            </form>
+                        </div>
+                        <div className='external-links'>
+                            <ul >
+                                <li><a href="https://patricksbrown1992.github.io/profile-site/">Portfolio</a></li>
+                                <li><a href="https://www.linkedin.com/in/patricksbrown1992/">LinkedIn</a></li>
+                                <li><a href="https://github.com/patricksbrown1992">Github</a></li>
 
+                            </ul>
+
+                        </div>
                     </div>
-                    <ul>
-                        <a href="https://patricksbrown1992.github.io/profile-site/">Portfolio</a>
-                        <a href="https://www.linkedin.com/in/patricksbrown1992/">LinkedIn</a>
-                        <a href="https://github.com/patricksbrown1992">Github</a>
-
-                    </ul>
 
                 </div>
 
