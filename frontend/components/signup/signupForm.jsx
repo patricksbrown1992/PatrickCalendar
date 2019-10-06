@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { userInfo } from 'os';
 
 class SignUpForm extends React.Component {
     constructor(props) {
@@ -18,12 +19,15 @@ class SignUpForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        debugger
+        if (e.currentTarget.classList[0] === "sign-up-continue") {
+            if(this.state.password == this.state.password2){
+                let user = {email: this.state.email, password: this.state.password};
+                this.props.signup(user);
+                this.setState({ email: '', password: '', password2: ''});
+                this.props.clearErrors();
 
-        if (e.currentTarget.children[0].classList.value === "sign-up-continue") {
-
-            this.props.signup(this.state);
-            this.setState({ email: '', password: '' });
-            this.props.clearErrors();
+            }
 
         } else {
             const email = 'admin@admin.com';
@@ -64,35 +68,38 @@ class SignUpForm extends React.Component {
                                 <button type='submit'>Demo for Free</button>
                             </div>
                         </form>
-                        <br />
+             
                         <div className="sign-up-inputs">
 
                             <input className="sign-up-email" type="text" value={this.state.email} placeholder='Email' onChange={this.handleChange('email')} />
-                            <input className="sign-up-password" type="password" placeholder='Password' value={this.state.password} onChange={this.handleChange('password')} />
-                            <input className="sign-up-password" type="password" placeholder='Confirm' value={this.state.password2} onChange={this.handleChange('password2')} />
-                        </div>
-                        <ul>
-                            <br />
-                            {errors}
-                            <br />
-                        </ul>
-                        <div className='sign-up-continue'>
-                            <Link to='/'>Sign In Instead</Link>
+                            <div className = 'double-password'>
+                                <input className="sign-up-password" type="password" placeholder='Password' value={this.state.password} onChange={this.handleChange('password')} />
+                                <input className="sign-up-password" type="password" placeholder='Confirm' value={this.state.password2} onChange={this.handleChange('password2')} />
 
-                            <form onSubmit={this.handleSubmit}>
-                                <button type='submit'>Next</button>
-                            </form>
+                            </div>
                         </div>
+                     
+                        {errors}
+                        
+                    </div>
+                    <div className='sign-up-button'>
+                        <Link to='/signup'>Create account</Link>
+                        <form className = 'sign-up-continue' onSubmit={this.handleSubmit}>
+                            <button type='submit'>Next</button>
+                        </form>
                     </div>
                     
+                    <div className='external-links'>
+                        <ul >
+                            <li><a href="https://patricksbrown1992.github.io/profile-site/">Portfolio</a></li>
+                            <li><a href="https://www.linkedin.com/in/patricksbrown1992/">LinkedIn</a></li>
+                            <li><a href="https://github.com/patricksbrown1992">Github</a></li>
+
+                        </ul>
+
+                    </div>
 
                 </div>
-                <ul>
-                    <a href="https://patricksbrown1992.github.io/profile-site/">Portfolio</a>
-                    <a href="https://www.linkedin.com/in/patricksbrown1992/">LinkedIn</a>
-                    <a href="https://github.com/patricksbrown1992">Github</a>
-
-                </ul>
             </div>
 
         );

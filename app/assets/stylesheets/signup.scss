@@ -1,0 +1,193 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.outerdiv {
+    display: flex;
+    margin-top: 80px;
+    flex-direction: column;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    background-color: #ffffff;
+    height: 500px;
+    z-index: 2;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    font-family: roboto, 'Noto Sans Myanmar UI', arial, sans-serif;
+}
+
+.sign-up-top {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-up-top h1 {
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.sign-up-top h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.sign-up-top h4 {
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.sign-up-middle {
+    height: 85px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-up-email {
+    border-radius: 4px;
+    color: #202124;
+    font-size: 16px;
+    height: 10px;
+    margin: 2px;
+    padding: 12px 14px;
+    width: 345px;
+    border: 1px solid #dadce0;
+    margin-bottom: 10px;
+}
+
+.sign-up-middle input:hover {
+    border: 2px solid #2c73e8;
+}
+
+.sign-up-middle li {
+    color: #d93125;
+    list-style: none;
+}
+.sign-up-middle form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sign-up-button {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.sign-up-button a {
+    text-decoration: none;
+    color: #2c73e8;
+    cursor: pointer;
+    padding-top: 15px;
+}
+
+.sign-up-button form {
+    // width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sign-up-button button {
+    background: #1a73e8;
+    outline: none;
+    color: #ffffff;
+    // line-height: 20px;
+    font-weight: 500;
+
+    text-align: center;
+    height: 40px;
+    width: 90px;
+    cursor: pointer;
+}
+
+.external-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.external-links ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.external-links a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+.sign-up-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.double-password {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50px;
+    width: 100%;
+}
+
+.double-password input {
+    border-radius: 4px;
+    color: #202124;
+    font-size: 16px;
+    height: 10px;
+    margin: 2px;
+    padding: 12px 14px;
+    width: 130px;
+    border: 1px solid #dadce0;
+   
+}
+
+.demo-button button {
+    background: #1a73e8;
+
+    color: #ffffff;
+    // line-height: 20px;
+    font-weight: 500;
+    width: 120px;
+    text-align: center;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    outline: none;
+}
