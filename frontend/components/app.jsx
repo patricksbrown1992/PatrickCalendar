@@ -6,6 +6,7 @@ import { Authorized, ProtectedRoute } from '../util/routeUtil';
 import SignUp from '../components/signup/signupContainer';
 import WeekShow from '../components/week/weekShowContainer';
 // import Modal from './modal/modal'
+import Events from '../components/events/eventIndexContainer';
 
 const App = () => (
     <>
@@ -13,6 +14,7 @@ const App = () => (
             <Authorized path='/signup' component={SignUp} />
             <Authorized exact path='/' component={LoginIn} />
             <ProtectedRoute path='/week' component={WeekShow} />
+            <ProtectedRoute path='/events' component={Events} />
         </Switch>
     </>
 );
